@@ -9,7 +9,7 @@ phases:
       - echo Installing dependencies...
       - pip install -r requirements.txt
       - pip install pytest pytest-cov
-  buld  <<< update this one :
+  build:
     commands:
       - echo Running tests...
       - export PYTHONPATH=.
@@ -19,7 +19,7 @@ phases:
       - python setup.py bdist_wheel
   post_build:
     commands:
-      - echo Build completed on Wed Nov 18 07:56:24 UTC 2026
+      - echo Build completed on `date`
 
 artifacts:
   files:
